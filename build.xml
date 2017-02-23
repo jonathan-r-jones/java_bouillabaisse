@@ -1,0 +1,2693 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="$UnderDevelopment">
+    <property environment="env"/>
+    <property name="junit.output.dir" value="junit"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.8"/>
+    <property name="source" value="1.8"/>
+    <path id="JUnit 4.libraryclasspath">
+        <pathelement location="../../../../../.p2/pool/plugins/org.junit_4.12.0.v201504281640/junit.jar"/>
+        <pathelement location="../../../../../.p2/pool/plugins/org.hamcrest.core_1.3.0.v201303031735.jar"/>
+    </path>
+    <path id="$UnderDevelopment.classpath">
+        <pathelement location="bin"/>
+        <path refid="JUnit 4.libraryclasspath"/>
+        <pathelement location="../../Java/Jars/external lib/itext-2.1.7.jar"/>
+        <pathelement location="../../Java/Jars/bforeport-1.1.60/bforeport.jar"/>
+        <pathelement location="../../Java/Jars/Iowagie Jar/toolbox-0.0.2.jar"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="Bfo3Test.test11">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.Bfo3Test" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="Bfo3Test.test12">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.Bfo3Test" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="Bfo3Test.test13">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.Bfo3Test" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="Bfo3Test.test14">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.Bfo3Test" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="Bfo3Test.test3">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.Bfo3Test" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="Bfo3Test.validateFileExists">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.Bfo3Test" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="Bfo3Test.validatePDFDoesNotExist">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.Bfo3Test" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="Bfo3Test.validateXmlFileExists">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.Bfo3Test" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="Bfo3Test.xmlFileWithDataIsWellFormedAndValid2">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.Bfo3Test" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="BFO_Hello_World">
+        <java classname="fileProcessor.BFO_Hello_World" failonerror="true" fork="yes">
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </java>
+    </target>
+    <target name="BFO_Hello_WorldTest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.BFO_Hello_WorldTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="BFO_Hello_WorldTest.test1">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.BFO_Hello_WorldTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="BFO_Hello_WorldTest.test10">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.BFO_Hello_WorldTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="BFO_Hello_WorldTest.test11">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.BFO_Hello_WorldTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="BFO_Hello_WorldTest.test3">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.BFO_Hello_WorldTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="BFO_Hello_WorldTest.test4">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.BFO_Hello_WorldTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="BFO_Hello_WorldTest.test5">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.BFO_Hello_WorldTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="BFO_Hello_WorldTest.test6">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.BFO_Hello_WorldTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="BFO_Hello_WorldTest.test7">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.BFO_Hello_WorldTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="BFO_Hello_WorldTest.test8">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.BFO_Hello_WorldTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="BFO_Hello_WorldTest.test9">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.BFO_Hello_WorldTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="BFO_Hello_WorldTest.validateFileExists">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.BFO_Hello_WorldTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="BFO_Hello_WorldTest.validateFileExists2">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.BFO_Hello_WorldTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="BFO_Hello_WorldTest.validateFileExists3">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.BFO_Hello_WorldTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="BFO_Hello_WorldTest.xmlFileIsWellFormedAndValid">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.BFO_Hello_WorldTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="BFO_Hello_WorldTest.xmlFileWithDataIsWellFormedAndValid2">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.BFO_Hello_WorldTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="BFO_Hello_WorldTest.xmlFileWithDataIsWellFormedAndValid3">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.BFO_Hello_WorldTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ConsoleRunner">
+        <java classname="generalTests.ConsoleRunner" failonerror="true" fork="yes">
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </java>
+    </target>
+    <target name="FileProcessorTests.test1">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.FileProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="FileProcessorTests.test10">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.FileProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="FileProcessorTests.test2">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.FileProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="FileProcessorTests.test3">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.FileProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="FileProcessorTests.test4">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.FileProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="FileProcessorTests.test5">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.FileProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="FileProcessorTests.test6">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.FileProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="FileProcessorTests.test7">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.FileProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="FileProcessorTests.test8">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.FileProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="FileProcessorTests.test9">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.FileProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="FileProcessorTests.xmlFileWithDataIsWellFormedAndValid3">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.FileProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ForMikeTests.test1">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.ForMikeTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ForMikeTests.test2">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.ForMikeTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ForMikeTests.test3">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.ForMikeTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="FromAlanTests">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.FromAlanTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="FromAlanTests.test1">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.FromAlanTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="FromAlanTests.test10">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.FromAlanTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="FromAlanTests.test11">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.FromAlanTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="FromAlanTests.test12">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.FromAlanTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="FromAlanTests.test1234">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.FromAlanTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="FromAlanTests.test13">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.FromAlanTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="FromAlanTests.test14">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.FromAlanTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="FromAlanTests.test15">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.FromAlanTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="FromAlanTests.test16">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.FromAlanTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="FromAlanTests.test17">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.FromAlanTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="FromAlanTests.test19">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.FromAlanTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="FromAlanTests.test2">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.FromAlanTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="FromAlanTests.test20">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.FromAlanTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="FromAlanTests.test21">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.FromAlanTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="FromAlanTests.test22">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.FromAlanTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="FromAlanTests.test3">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.FromAlanTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="FromAlanTests.test4">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.FromAlanTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="FromAlanTests.test5">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.FromAlanTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="FromAlanTests.test6">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.FromAlanTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="FromAlanTests.test7">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.FromAlanTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="FromAlanTests.test8">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.FromAlanTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="FromAlanTests.test9">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.FromAlanTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="GeneralTests">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="generalTests.GeneralTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="GeneralTests.test1">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="generalTests.GeneralTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="GeneralTests.test11">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="generalTests.GeneralTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="GeneralTests.test12">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="generalTests.GeneralTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="GeneralTests.test13">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="generalTests.GeneralTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="GeneralTests.test4">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="generalTests.GeneralTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="GeneralTests.test5">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="generalTests.GeneralTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="GeneralTests.test6">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="generalTests.GeneralTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="GeneralTests.test7">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="generalTests.GeneralTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="GeneralTests.test8">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="generalTests.GeneralTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="GeneralTests.validateFileExists">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="generalTests.GeneralTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="GoodTestsSuite">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="generalTests.GoodTestsSuite" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="HancTests">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.HancTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="HancTests.xmlFileIsWellFormedAndValid">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.HancTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="HancTests.xmlFileWithDataIsWellFormedAndValid">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.HancTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="HancTests.xmlFileWithDataIsWellFormedAndValid2">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.HancTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="HelloWorld">
+        <java classname="greetings.HelloWorld" failonerror="true" fork="yes">
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </java>
+    </target>
+    <target name="HelloWorldApp">
+        <java classname="greetings.HelloWorldApp" failonerror="true" fork="yes">
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </java>
+    </target>
+    <target name="HelloWorldTest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="greetings.HelloWorldTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="IText_Version_2_17_PDF_File_Creator_Test">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="iTextExperimentation.IText_Version_2_17_PDF_File_Creator_Test" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="IText_Version_2_17_PDF_File_Creator_Test.pdfFileExists">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="iTextExperimentation.IText_Version_2_17_PDF_File_Creator_Test" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="IText_Version_2_17_PDF_File_Creator_Test.test1">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="iTextExperimentation.IText_Version_2_17_PDF_File_Creator_Test" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="Main">
+        <java classname="Main" failonerror="true" fork="yes">
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </java>
+    </target>
+    <target name="MilestoneTests.createSimplePdfDocument">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.MilestoneTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="MilestoneTests.doesFileExist">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.MilestoneTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="MilestoneTests.generateXML">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.MilestoneTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="MilestoneTests">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.MilestoneTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="MilestoneTests.readFirstCharacterInFile">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.MilestoneTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="MilestoneTests.test3">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.MilestoneTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="MilestoneTests.validateDataTweaked">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.MilestoneTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="MilestoneTests.validateDataXmlFile">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.MilestoneTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="MilestoneTests.validateFileExists">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.MilestoneTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="MilestoneTests.validateJavaCreatedXml">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.MilestoneTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="MilestoneTests.validateXml">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.MilestoneTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="MilestoneTests.xmlFileIsWellFormedAndValid">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.MilestoneTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="MilestoneTests.xmlFileWithDataIsWellFormedAndValid3">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.MilestoneTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ParameterizedTests.test1">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="generalTests.ParameterizedTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfCreation_Test">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="pdfCreation.PdfCreation_Test" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfCreation_Test.test1">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="pdfCreation.PdfCreation_Test" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfCreation_Test.test2">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="pdfCreation.PdfCreation_Test" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test1">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test10">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test10b">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test11">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test11b">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test12">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test12b">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test13">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test13b">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test14">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test14b">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test15">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test15b">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test16">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test16b">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test17">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test17b">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test18">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test18b">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test19">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test1b">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test2">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test20">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test21">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test22">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test22b">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test22c">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test2b">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test3">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test30a">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test30b">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test30c">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test30d">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test31a">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test31b">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test31c">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test31d">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test32a">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test32b">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test32c">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test32d">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test33a">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test33b">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test33c">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test33d">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test34a">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test34b">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test34c">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test34d">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test35a">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test35b">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test35c">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test35d">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test36a">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test36b">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test36c">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test36d">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test37a">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test37b">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test37c">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test37d">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test38">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test39">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test3b">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test4">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test40">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test41">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test42">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test43">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test44">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test45">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test46">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test4b">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test5">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test8">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test8b">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test9">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfProcessorTests.test9b">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfProcessorTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfWriterPssTest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfWriterPssTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfWriterPssTest.test1">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfWriterPssTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfWriterPssTest.test10">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfWriterPssTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfWriterPssTest.test2">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfWriterPssTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfWriterPssTest.test3">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfWriterPssTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfWriterPssTest.test4">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfWriterPssTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfWriterPssTest.test5">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfWriterPssTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfWriterPssTest.test6">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfWriterPssTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfWriterPssTest.test7">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfWriterPssTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfWriterPssTest.test8">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfWriterPssTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="PdfWriterPssTest.test9">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="fileProcessor.PdfWriterPssTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ProteinTrackerSuite">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="generalTests.ProteinTrackerSuite" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.doesFileExist">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.firstCharacterIsH">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.firstCharacterIsZ2">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.readFirstCharacterInFile">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.readTheFirstCharacterInAFile">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test18">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test19">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test20">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test21">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test22">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test23">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test24">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test25">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test28">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test29">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test30">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test31">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test32">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test33">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test34">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test35">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test36">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test37">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test38">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test39">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test40">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test41">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test42">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test43">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test44">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test45">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test46">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test47">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test48">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test49">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test50">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test51">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test52">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test53">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test54">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test55">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test56">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test57">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test58">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test59">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test60">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test61">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test62">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test63">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test64">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test65">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test66">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test67">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test68">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test69">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test7">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test70">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test71">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test72">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test73">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test74">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test75">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test76">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test77">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test78">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test79">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.test9">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileTest.XmlFileIsWellFormedAndValid">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileVettedTest.doesFileExist">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileVettedTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileVettedTest.fileExists">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileVettedTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileVettedTest.generateXML">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileVettedTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileVettedTest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileVettedTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileVettedTest.validateDataXmlFile">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileVettedTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileVettedTest.validateNoDataXmlFile">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileVettedTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="ReadFileVettedTest.validateXml">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="XmlOperations.ReadFileVettedTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="TrackingServiceTests">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="generalTests.TrackingServiceTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="TrackingServiceTests.test1">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="generalTests.TrackingServiceTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="TrackingServiceTests.test2">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="generalTests.TrackingServiceTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="TrackingServiceTests.test2_2">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="generalTests.TrackingServiceTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="TrackingServiceTests.test2_3">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="generalTests.TrackingServiceTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="TrackingServiceTests.test6">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="generalTests.TrackingServiceTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="TrackingServiceTests.test6_2">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="generalTests.TrackingServiceTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="TrackingServiceTests.test6_3">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="generalTests.TrackingServiceTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="TrackingServiceTests.test7">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="generalTests.TrackingServiceTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="TrackingServiceTests.test8">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="generalTests.TrackingServiceTests" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="TrackingServiceTheories">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="generalTests.TrackingServiceTheories" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="TrackingServiceTheories.positiveValuesShouldAlwaysHavePositiveTotals">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="generalTests.TrackingServiceTheories" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="WriteXMLFile_Test.fileExists">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="xmlOperations2.WriteXMLFile_Test" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="WriteXMLFile_Test.generateXML">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="xmlOperations2.WriteXMLFile_Test" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="WriteXMLFile_Test.test1">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="xmlOperations2.WriteXMLFile_Test" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="WriteXMLFile_Test.test2">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="xmlOperations2.WriteXMLFile_Test" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="WriteXMLFile_Test.test3">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="xmlOperations2.WriteXMLFile_Test" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="WriteXMLFile_Test.test4">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="xmlOperations2.WriteXMLFile_Test" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="WriteXMLFile_Test.validateDataTweaked">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="xmlOperations2.WriteXMLFile_Test" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="WriteXMLFile_Test.validateDataXmlFile">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="xmlOperations2.WriteXMLFile_Test" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="WriteXMLFile_Test.validateXml">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="xmlOperations2.WriteXMLFile_Test" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="$UnderDevelopment.classpath"/>
+        </junit>
+    </target>
+    <target name="junitreport">
+        <junitreport todir="${junit.output.dir}">
+            <fileset dir="${junit.output.dir}">
+                <include name="TEST-*.xml"/>
+            </fileset>
+            <report format="frames" todir="${junit.output.dir}"/>
+        </junitreport>
+    </target>
+</project>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
+ <xfa:data>
+<GovernmentProperty>
+	<DocumentInformation>
+		<AttachmentNumber>1</AttachmentNumber>
+		<AttachmentFileNumber>1
+		</AttachmentFileNumber>
+		<AttachmentFileTotalNumber>
+		5
+		</AttachmentFileTotalNumber>
+		<AttachmentDate>
+		2016-11-15
+		</AttachmentDate>
+    <ContractingOfficerName>999 - Contracting Officer Name
+    </ContractingOfficerName>
+		<ContractingOfficerEmailAddress>888contracting_guy@officer.com</ContractingOfficerEmailAddress>
+		<ContractingOfficerTelephoneNumber/>
+		<ProcurementInstrument>
+			<DocumentDescription/>
+			<ProcurementInstrumentModificationNumber6/>
+			<AmendmentNumber/>
+			<ReferenceProcurementInstrument>
+				Nov-17-2016
+			</ReferenceProcurementInstrument>
+		</ProcurementInstrument>
+		<ProcurementInstrumentNumber>
+			<ActivityAddressCode/>
+			<Year/>
+			<ProcurementInstrumentTypeCode/>
+			<SerializedIdentifier/>
+		</ProcurementInstrumentNumber>
+		<ProcurementInstrumentOrderNumber>
+			<OrderNumber13>
+				<ActivityAddressCode/>
+				<Year/>
+				<ProcurementInstrumentTypeCode> </ProcurementInstrumentTypeCode>
+				<SerializedIdentifier/>
+			</OrderNumber13>
+		</ProcurementInstrumentOrderNumber>
+		<OrderNumber4/>
+	</DocumentInformation>
+	<SeriallyManagedItemsList>
+		<LineNumber/>
+		<ItemName/>
+		<ItemDescription/>
+		<NationalStockNumber/>
+		<ManufacturerCAGE/>
+		<PartNumber/>
+		<ModelNumber/>
+		<SerialNumber/>
+		<UniqueItemIdentifier/>
+		<Quantity/>
+		<UnitOfMeasure/>
+		<UnitAcquisitionCost/>
+		<UseAsIs/>
+		<OnOrBeforeDate/>
+		<Duration/>
+		<TimeUnit> </TimeUnit>
+		<DeliveryEvent/>
+		<Notes/>
+	</SeriallyManagedItemsList>
+	<NonSeriallyManagedItemsList>
+		<LineNumber/>
+		<ItemName/>
+		<ItemDescription/>
+		<NationalStockNumber/>
+		<ManufacturerCAGE/>
+		<PartNumber/>
+		<ModelNumber/>
+		<Quantity/>
+		<UnitOfMeasure/>
+		<UnitAcquisitionCost/>
+		<UseAsIs/>
+		<OnOrBeforeDate/>
+		<Duration/>
+		<TimeUnit> </TimeUnit>
+		<DeliveryEvent/>
+		<Notes/>
+	</NonSeriallyManagedItemsList>
+	<RequisitionableList>
+		<RequisitionableItem>
+			<LineNumber/>
+			<ItemName/>
+			<ItemDescription/>
+			<NationalStockNumber/>
+			<ManufacturerCAGE/>
+			<PartNumber/>
+			<Quantity/>
+			<UnitOfMeasure/>
+			<UnitAcquisitionCost/>
+			<UseAsIs/>
+		</RequisitionableItem>
+	</RequisitionableList>
+</GovernmentProperty>
+</xfa:data>
+</xfa:datasets>

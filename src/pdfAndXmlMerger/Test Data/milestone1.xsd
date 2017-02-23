@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+<xs:element name="GovernmentProperty">
+  <xs:complexType>
+    <xs:sequence>
+
+
+      <xs:element name="DocumentInformation">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="AttachmentNumber" type="xs:string"/>
+            <xs:element name="AttachmentFileNumber" type="xs:string"/>
+            <xs:element name="AttachmentFileTotalNumber" type="xs:string"/>
+            <xs:element name="AttachmentDate" type="xs:string"/>
+            <xs:element name="ContractingOfficerName" type="xs:string"/>
+            <xs:element name="ContractingOfficerEmailAddress" type="xs:string"/>
+            <xs:element name="ContractingOfficerTelephoneNumber" type="xs:string"/>
+            <xs:element name="ProcurementInstrument">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="DocumentDescription" type="xs:string"/>
+                  <xs:element name="ProcurementInstrumentModificationNumber6" type="xs:string"/>
+                  <xs:element name="AmendmentNumber" type="xs:string"/>
+                  <xs:element name="ReferenceProcurementInstrument" type="xs:string"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="ProcurementInstrumentNumber">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ActivityAddressCode" type="xs:string"/>
+                  <xs:element name="Year" type="xs:string"/>
+                  <xs:element name="ProcurementInstrumentTypeCode" type="xs:string"/>
+                  <xs:element name="SerializedIdentifier" type="xs:string"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="ProcurementInstrumentOrderNumber">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="OrderNumber13">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="ActivityAddressCode" type="xs:string"/>
+                        <xs:element name="Year" type="xs:string"/>
+                        <xs:element name="ProcurementInstrumentTypeCode" type="xs:string"/>
+                        <xs:element name="SerializedIdentifier" type="xs:string"/>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="OrderNumber4" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+
+
+
+      <xs:element name="SeriallyManagedItemsList" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="LineNumber" type="xs:string"/>
+            <xs:element name="ItemName" type="xs:string"/>
+            <xs:element name="ItemDescription" type="xs:string"/>
+            <xs:element name="NationalStockNumber" type="xs:string"/>
+            <xs:element name="ManufacturerCAGE" type="xs:string"/>
+            <xs:element name="PartNumber" type="xs:string"/>
+            <xs:element name="ModelNumber" type="xs:string"/>
+            <xs:element name="SerialNumber" type="xs:string"/>
+            <xs:element name="UniqueItemIdentifier" type="xs:string"/>
+            <xs:element name="Quantity" type="xs:string"/>
+            <xs:element name="UnitOfMeasure" type="xs:string"/>
+            <xs:element name="UnitAcquisitionCost" type="xs:string"/>
+            <xs:element name="UseAsIs" type="xs:string"/>
+            <xs:element name="OnOrBeforeDate" type="xs:string"/>
+            <xs:element name="Duration" type="xs:string"/>
+            <xs:element name="TimeUnit" type="xs:string"/>
+            <xs:element name="DeliveryEvent" type="xs:string"/>
+            <xs:element name="Notes" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+
+
+
+      <xs:element name="NonSeriallyManagedItemsList" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="LineNumber" type="xs:string"/>
+            <xs:element name="ItemName" type="xs:string"/>
+            <xs:element name="ItemDescription" type="xs:string"/>
+            <xs:element name="NationalStockNumber" type="xs:string"/>
+            <xs:element name="ManufacturerCAGE" type="xs:string"/>
+            <xs:element name="PartNumber" type="xs:string"/>
+            <xs:element name="ModelNumber" type="xs:string"/>
+            <xs:element name="Quantity" type="xs:string"/>
+            <xs:element name="UnitOfMeasure" type="xs:string"/>
+            <xs:element name="UnitAcquisitionCost" type="xs:string"/>
+            <xs:element name="UseAsIs" type="xs:string"/>
+            <xs:element name="OnOrBeforeDate" type="xs:string"/>
+            <xs:element name="Duration" type="xs:string"/>
+            <xs:element name="TimeUnit" type="xs:string"/>
+            <xs:element name="DeliveryEvent" type="xs:string"/>
+            <xs:element name="Notes" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+
+
+
+      <xs:element name="RequisitionableList" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequisitionableItem" minOccurs="0">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="LineNumber" type="xs:string"/>
+                  <xs:element name="ItemName" type="xs:string"/>
+                  <xs:element name="ItemDescription" type="xs:string"/>
+                  <xs:element name="NationalStockNumber" type="xs:string"/>
+                  <xs:element name="ManufacturerCAGE" type="xs:string"/>
+                  <xs:element name="PartNumber" type="xs:string"/>
+                  <xs:element name="Quantity" type="xs:string"/>
+                  <xs:element name="UnitOfMeasure" type="xs:string"/>
+                  <xs:element name="UnitAcquisitionCost" type="xs:string"/>
+                  <xs:element name="UseAsIs" type="xs:string"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+
+
+
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+</xs:schema>

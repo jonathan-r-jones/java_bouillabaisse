@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
+ <xfa:data>
+<GovernmentProperty>
+	<DocumentInformation>
+		<AttachmentNumber>99999</AttachmentNumber>
+		<AttachmentFileNumber>9</AttachmentFileNumber>
+		<AttachmentFileTotalNumber>999</AttachmentFileTotalNumber>
+		<AttachmentDate>2016-11-21</AttachmentDate>
+    <ContractingOfficerName>Contracting Officer Name</ContractingOfficerName>
+		<ContractingOfficerEmailAddress>its_a_50_character_maximum_123456_dddddabcde@e.org
+		</ContractingOfficerEmailAddress>
+		<ContractingOfficerTelephoneNumber>(703) 972-1244 extension 34
+		</ContractingOfficerTelephoneNumber>
+		<ProcurementInstrument>
+			<DocumentDescription/>
+			<ProcurementInstrumentModificationNumber6>abc123
+			</ProcurementInstrumentModificationNumber6>
+			<AmendmentNumber>9999
+			</AmendmentNumber>
+      <ReferenceProcurementInstrument>This line is 50 characters long. 34567 4 1234567 5</ReferenceProcurementInstrument>
+		</ProcurementInstrument>
+		<ProcurementInstrumentNumber>
+			<ActivityAddressCode>169999
+			</ActivityAddressCode>
+			<Year>16
+			</Year>
+			<ProcurementInstrumentTypeCode>V
+			</ProcurementInstrumentTypeCode>
+			<SerializedIdentifier>1699
+			</SerializedIdentifier>
+		</ProcurementInstrumentNumber>
+		<ProcurementInstrumentOrderNumber>
+      <OrderNumber13>
+        <ActivityAddressCode>179999
+        </ActivityAddressCode>
+        <Year>17
+        </Year>
+        <ProcurementInstrumentTypeCode>A</ProcurementInstrumentTypeCode>
+        <SerializedIdentifier>1799
+        </SerializedIdentifier>
+      </OrderNumber13>
+		</ProcurementInstrumentOrderNumber>
+		<OrderNumber4>1233
+		</OrderNumber4>
+	</DocumentInformation>
+  <SeriallyManagedItemsList>
+    <LineNumber>2</LineNumber>
+    <ItemName>Item Name Eh
+    </ItemName>
+    <ItemDescription>Item Description
+    </ItemDescription>
+    <NationalStockNumber>1234567890123
+    </NationalStockNumber>
+    <ManufacturerCAGE>ABC12
+    </ManufacturerCAGE>
+    <PartNumber>abc12345493389
+    </PartNumber>
+    <ModelNumber>abcd1234
+    </ModelNumber>
+    <SerialNumber>zzx1234567
+    </SerialNumber>
+    <UniqueItemIdentifier>xyz1234
+    </UniqueItemIdentifier>
+    <Quantity>1234567
+    </Quantity>
+    <UnitOfMeasure>10 Kilogram Drum
+    </UnitOfMeasure>
+    <UnitAcquisitionCost>448899
+    </UnitAcquisitionCost>
+    <UseAsIs>True
+    </UseAsIs>
+    <OnOrBeforeDate>2017-01-01
+    </OnOrBeforeDate>
+    <Duration>876543210
+    </Duration>
+    <TimeUnit>Months</TimeUnit>
+    <DeliveryEvent>Award Date
+    </DeliveryEvent>
+    <Notes>The rain in Uganda . . .
+    </Notes>
+  </SeriallyManagedItemsList>
+  <SeriallyManagedItemsList>
+		<LineNumber>99999
+		</LineNumber>
+		<ItemName>Item Name Eh
+		</ItemName>
+		<ItemDescription>Item Description
+		</ItemDescription>
+    <NationalStockNumber>1234567890123
+    </NationalStockNumber>
+    <ManufacturerCAGE>ABC12
+    </ManufacturerCAGE>
+    <PartNumber>abc12345493389
+    </PartNumber>
+    <ModelNumber>abcd1234
+    </ModelNumber>
+    <SerialNumber>zzx1234567
+    </SerialNumber>
+    <UniqueItemIdentifier>xyz1234
+    </UniqueItemIdentifier>
+    <Quantity>1234567
+    </Quantity>
+    <UnitOfMeasure>10 Kilogram Drum
+    </UnitOfMeasure>
+    <UnitAcquisitionCost>448899
+    </UnitAcquisitionCost>
+    <UseAsIs>True
+    </UseAsIs>
+    <OnOrBeforeDate>2017-01-01
+    </OnOrBeforeDate>
+    <Duration>876543210
+    </Duration>
+    <TimeUnit>Months</TimeUnit>
+    <DeliveryEvent>Award Date
+    </DeliveryEvent>
+    <Notes>The rain in Spain . . .
+    </Notes>
+	</SeriallyManagedItemsList>
+  <NonSeriallyManagedItemsList>
+    <LineNumber>445
+    </LineNumber>
+    <ItemName>44 Item Name Eh
+    </ItemName>
+    <ItemDescription>44 Item Description
+    </ItemDescription>
+    <NationalStockNumber>4412345678901
+    </NationalStockNumber>
+    <ManufacturerCAGE>ZBC12
+    </ManufacturerCAGE>
+    <PartNumber>Zbc12345493389
+    </PartNumber>
+    <ModelNumber>Zbcd1234
+    </ModelNumber>
+    <Quantity>44234567
+    </Quantity>
+    <UnitOfMeasure>100 Lineal Yards
+    </UnitOfMeasure>
+    <UnitAcquisitionCost>558899
+    </UnitAcquisitionCost>
+    <UseAsIs>False
+    </UseAsIs>
+    <OnOrBeforeDate>2018-01-01
+    </OnOrBeforeDate>
+    <Duration>876543210
+    </Duration>
+    <TimeUnit>Weeks</TimeUnit>
+    <DeliveryEvent>Notice to Proceed
+    </DeliveryEvent>
+    <Notes>The rain in England . . .
+    </Notes>
+  </NonSeriallyManagedItemsList>
+  <NonSeriallyManagedItemsList>
+    <LineNumber>44999
+    </LineNumber>
+    <ItemName>44 Item Name Eh
+    </ItemName>
+    <ItemDescription>44 Item Description
+    </ItemDescription>
+    <NationalStockNumber>4412345678901
+    </NationalStockNumber>
+    <ManufacturerCAGE>ZBC12
+    </ManufacturerCAGE>
+    <PartNumber>Zbc12345493389
+    </PartNumber>
+    <ModelNumber>Zbcd1234
+    </ModelNumber>
+    <Quantity>44234567
+    </Quantity>
+    <UnitOfMeasure>100 Lineal Yards
+    </UnitOfMeasure>
+    <UnitAcquisitionCost>558899
+    </UnitAcquisitionCost>
+    <UseAsIs>False
+    </UseAsIs>
+    <OnOrBeforeDate>2018-01-01
+    </OnOrBeforeDate>
+    <Duration>876543210
+    </Duration>
+    <TimeUnit>Weeks</TimeUnit>
+    <DeliveryEvent>Notice to Proceed
+    </DeliveryEvent>
+    <Notes>The rain in Portugal  . . .
+    </Notes>
+  </NonSeriallyManagedItemsList>
+  <NonSeriallyManagedItemsList>
+    <LineNumber>1000</LineNumber>
+    <ItemName>poppy cock</ItemName>
+    <ItemDescription>Long description does not wrap</ItemDescription>
+    <NationalStockNumber>2345678901234</NationalStockNumber>
+    <ManufacturerCAGE/>
+    <PartNumber/>
+    <ModelNumber/>
+    <Quantity>570.0</Quantity>
+    <UnitOfMeasure>Each</UnitOfMeasure>
+    <UnitAcquisitionCost/>
+    <UseAsIs>false</UseAsIs>
+    <OnOrBeforeDate/>
+    <Duration/>
+    <TimeUnit/>
+    <DeliveryEvent>Award Date
+    </DeliveryEvent>
+    <Notes>The rain somewhere . . .
+    </Notes>
+  </NonSeriallyManagedItemsList>
+
+	<RequisitionableList>
+		<RequisitionableItem>
+      <LineNumber>1</LineNumber>
+      <ItemName>TBD</ItemName>
+      <ItemDescription>Wish List Item</ItemDescription>
+      <NationalStockNumber>1234567890123</NationalStockNumber>
+      <ManufacturerCAGE>SAMPL</ManufacturerCAGE>
+      <PartNumber></PartNumber>
+      <Quantity>1</Quantity>
+      <UnitOfMeasure>1000 Meters</UnitOfMeasure>
+      <UnitAcquisitionCost></UnitAcquisitionCost>
+      <UseAsIs>True</UseAsIs>
+		</RequisitionableItem>
+	</RequisitionableList>
+</GovernmentProperty>
+</xfa:data>
+</xfa:datasets>
